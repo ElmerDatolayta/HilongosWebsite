@@ -304,6 +304,7 @@ body{
                 height: 150px;
                 width: 150px;
             }
+            
             & p{
                 font-family: Century Gothic;
             }
@@ -315,6 +316,15 @@ body{
                 border-radius: 30px;
                 padding:3px 20px;
                 margin-bottom: 4%;
+            }
+        }
+        & .col-md-3:hover{
+            & img{
+                border:2px solid #11bfa0;
+                
+            }
+            & a{
+                background-color: #fcc621;
             }
         }
     }
