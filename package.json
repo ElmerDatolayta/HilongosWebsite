@@ -1,0 +1,26 @@
+{
+  "name": "hilongos_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server -o"
+  },
+  "author": "Creative Dev Labs",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-bower-files": "^0.2.7",
+    "gulp-clean": "^0.3.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-minify": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "http-server": "^0.10.0",
+    "wiredep": "^4.0.0"
+  }
+}
