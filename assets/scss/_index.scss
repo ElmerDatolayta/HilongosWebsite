@@ -329,6 +329,87 @@ body{
         }
     }
 }
+#view{
+    background-image: url("../images/alikaraw.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    & #box1{
+        margin: 0 auto;
+        width: 80%;
+        height: 50vh;
+        border:2px solid #fff;
+        background-color: transparent;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+    }
+    & #box2{
+        margin: 0 auto;
+        width: 70%;
+        height: 60vh;
+        border:2px solid #fff;
+        background-color: transparent;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        & h2{
+            text-align: center;
+            padding-top: 10%;
+            color:#f8bd00;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            & span{
+                color:#fff;
+                text-transform: capitalize;
+            }
+        }
+        & p{
+            width: 65%;
+            margin: 0 auto;
+            color:#fff;
+        }
+    }
+}
+#tourist{
+    #spot{
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        & #image-left{
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            & .imagecontent{
+                flex-grow: 1;
+            }
+        }
+        & #center-image{
+            flex-grow: 2;
+        }
+        & #image-right{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            & .imagecontent{
+                flex-grow: 1;
+            }
+        }
+    }
+    & #spot2{
+        display: flex;
+        width: 100%;
+        height: 40vh;
+        & .image-content{
+            flex-grow: 1;
+        }
+    }
+}
+#map{
+    height: 70vh;
+    width: 100%;
+}
 @media (max-width:768px){
     .navbar{
         padding: 0 5%;
