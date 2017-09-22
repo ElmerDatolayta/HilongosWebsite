@@ -408,8 +408,39 @@ body{
     }
 }
 #map{
-    height: 70vh;
+    position: relative;
+    height: 80vh;
     width: 100%;
+    & iframe{
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+    & .col-md-5{
+        height: 100%;
+        padding-top: 5%;
+        & #touch{
+            font-size: 1.5em;
+            font-family: Century Gothic;
+            border-radius: 10px;
+            height: 90%;
+            padding:2% 5%;
+            width: 60%;
+            margin: 0 auto;
+            background-color: #51cab2;
+            & h2{
+                font-weight: bold;
+                text-align: center;
+            }
+            & form{
+                & a{
+                    text-align: right;
+                }
+            }
+            
+
+        }
+    }
 }
 @media (max-width:768px){
     .navbar{
