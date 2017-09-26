@@ -220,6 +220,7 @@ body{
             bottom:5px;
             width: 25%;
             right: 8px;
+            z-index: 10;
             & li{
                 border:2px solid #eee;
                 border-radius: 99%;
@@ -283,6 +284,8 @@ body{
 }
 #serve{
     padding: 4% 0;
+    height: 100%;
+    width: 100%;
     & h2{
         padding-bottom: 2%;
         text-align: center;
@@ -495,6 +498,18 @@ footer{
     .navbar{
         padding: 0 5%;
     }
+    // #about{
+    //     height: 100%;
+    //     .overlay{
+    //         height: 130vh;
+    //     }
+    //     #bannerimage{
+    //         height: 100%;
+    //         .bannercontent{
+    //             height: 130vh;
+    //         }
+    //     }
+    // }
 }
 @media (max-width:768px) And (min-width:450px){
     #map{
