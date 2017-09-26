@@ -22,6 +22,11 @@ gulp.task('clean-css',function(){
     return gulp.src('./public/assets/css/*.min.css')
     .pipe(clean());
 });
+
+gulp.task('clean-barangay',function(){
+    return gulp.src('./public/barangay/**/*')
+    .pipe(clean());
+});
 // gulp.task('clean-html',function(){
 //     return gulp.src('./index.html')
 //     .pipe(clean());
@@ -73,6 +78,21 @@ gulp.task('html',function(){
     .pipe(gulp.dest('./public/'));
 });
 
+gulp.task('barangay',['clean-barangay'],function(){
+    return gulp.src('assets/pages/barangay/**/*')
+    .pipe(wiredep({
+        fileTypes: {
+            html: {
+                replace: {
+                    js: '<script src="{{filePath}}"></script>'
+                }
+            }
+        }
+    }))
+    .pipe(inject(gulp.src(['./public/assets/js/*.js','./public/assets/css/*.css'], {read: false}),{ignorePath:'public'}))
+    .pipe(gulp.dest('./public/barangay/'));
+});
+
 gulp.task('image',function(){
     return gulp.src('assets/images/*')
     .pipe(gulp.dest('./public/assets/images'));
@@ -89,6 +109,7 @@ gulp.task('watch', function(){
     gulp.watch('./assets/scss/*.scss',['styles']);
     gulp.watch('./assets/images/*',['image']);
     gulp.watch('./assets/fonts/*',['font']);
+    gulp.watch('./assets/pages/barangay/**/*',['barangay']);
 });
 
 gulp.task("bower-files", function(){
@@ -96,4 +117,4 @@ gulp.task("bower-files", function(){
 });
 
 
-gulp.task('default',['bower-files','styles','js','html','image','font','watch']);
+gulp.task('default',['bower-files','styles','js','html','barangay','image','font','watch']);
