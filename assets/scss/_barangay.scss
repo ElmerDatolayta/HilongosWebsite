@@ -1,12 +1,64 @@
 #barangayPage{
+    
+    #mapSection{
+        position: relative;
+        .search-box-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            #_dropdown{
+                background-color: rgba(255,255,255,0.7);
+                width: 100%;
+                margin-top: 5px;
+                .angucomplete-title{
+                    font-size: 20px;
+                    .highlight{
+                        color: red;
+                        font-weight: bold;
+                    }
+                }
 
-    // usefull class //
+            }     
+            .input-form{
+                position: relative;
+                &.icon-right{
+                    i{
+                        position: absolute;
+                        right: 23px;
+                        top: 16px;
+                        font-size: 2em;
+                        color: #999999;
+                        opacity: 0.7;
+                    }
+                }
+                input{
+                    padding-right: 60px;
+                }
+            }    
+        }
+        .barangay-map{
+            width: 100%;
+            height: auto;
+        }
+        .search-box{
+            padding: 30px;
+            font-size: 2em;
+            background-color: rgba(255,255,255,0.3);
+            border: 0;
+            border-bottom: 2px solid red;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        
+    }
+
 
     &.horizontal-center{
         margin-top: 30vh;
     }
     .overlay{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.6);
         height: 100%;
         width: 100%;
     }
@@ -51,51 +103,61 @@
         }
     }
     .collapse-section{
-        background-image: url('../images/carabao.jpg');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
         height: 100vh;
-        width: 100%;
-
-        &.collapse-section {
-           .col-12{
-               padding: 3%;
-           }
-        }
-        
-        .padding{
-            padding-left: 3%;
-            padding-right: 3%;
-        }
-        & h2{
-            color: white;
-            text-shadow: 2px 2px 4px black;
-            font-weight: bold;
-        }
-        & img{
+        .background{
+            background-image: url('../images/carabao.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
             width: 100%;
-            height: 400px;
-        }
-        .col-12{
-            padding: 0px;
-        }
-        .autoplay{
-            h3{
-                color: yellow;
-                font-weight: bold;
+            height: 100vh;
+
+            &.collapse-section {
+            .col-12{
+                padding: 3%;
+            }
             }
             
-            p{
+            .padding{
+                padding-left: 3%;
+                padding-right: 3%;
+            }
+            & h2{
                 color: white;
+                text-shadow: 2px 2px 4px black;
+                font-weight: bold;
+            }
+            & img{
+                width: 100%;
+                height: 400px;
+            }
+            .col-12{
+                padding: 0px;
+            }
+            .autoplay{
+                h3{
+                    color: yellow;
+                    font-weight: bold;
+                }
+                
+                p{
+                    color: white;
+                }
+            }
+            .slick-prev {
+                left: 10px;
+                z-index: 10;
+            }
+            .slick-next {
+                right: 10px;
+                z-index: 10;
             }
         }
     }
     .collapse-section1{
-        background-image: url('../images/officials-background.jpg');
+        background-image: url('../images/ofiicials-background.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        height: 220vh;   
         .tag-name{
             h1{
                 font-weight: bold;
@@ -140,7 +202,6 @@
         }
     } 
     .collapse-section2{
-        height: 100vh;
         width: 100%;
         background-image: url('../images/camera.jpg');
         background-size: 100% 100%;
@@ -164,8 +225,25 @@
                 text-indent: 100px;
                 text-align: justify;
             }
-        }
         
+        }
+        .overlay1{
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 100%;
+        }
+        .margin-bottom{
+            margin-bottom: 100px;
+        }
+    }
+    .arrow-up{
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        margin-left: 45%;
+        border-bottom: 20px solid black;
+        margin-top: -20px;
     }
     .tourist-spot{
         h2{
@@ -187,30 +265,35 @@
         .slick-prev:before, .slick-next:before {
             color: gray;
         }
+        .slick-next {
+            right: 5px;
+        }
+        .slick-prev {
+            left: 5px;
+            z-index: 1;
+        }
     }
 }
-
+.for-mobile{
+    display: none;
+}
 @media screen and (max-width: 414px) {
-   .slider-nav{
-      img{
-         position: absolute;
-         visibility: hidden;
-          height: 0vh;
-      }
-   }
-   .slider-for{
+    .slider-nav{
        img{
-           width: 100%;
+          position: absolute;
+          visibility: hidden;
+           height: 0vh;
        }
-   }
-    .slick-next {
-        /* right: -25px; */
-        right: 0px;
-        margin-top: -40vh;
     }
-    .slick-prev {
-        /* right: -25px; */
-        left: 0px;
-        margin-top: -40vh;
+    .slider-for{
+        img{
+            width: 100%;
+        }
     }
-}
+     .for-non-mobile{
+         display: none;
+     }
+     .for-mobile{
+        display: block;
+    }
+ }

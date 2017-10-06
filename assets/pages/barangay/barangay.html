@@ -36,366 +36,627 @@
     </style>
 </head>
 <body id="barangayPage">
-
-    <!-- navbar section  -->
-
-    <div id = "mobileview">
-
-        <div class="overlay"></div>
-        <div id="navmenu">
-            <button><span class="fa fa-remove"></span></button>
-            <img src="assets/images/hos.png">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Homessss</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Departments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tourists</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Investors</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contacts</a>
-            </li>
-        </div>
-        
-    </div>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> 
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="../assets/images/hos.png">
-                </a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Departments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tourists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Investors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- hilongos banner section -->
-    <section class="hilongosMap">
-        <img src="../assets/images/main.jpg" alt="">
-    </section>
-    <section class="mapDescripption container-fluid">
-       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
-            <img src="../assets/images/sanRoque.png" alt="">
-       </div>
-       <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sanRoque">
-            <br />
-            <h2>SAN ROQUE</h2>
-            <hr />
-            <br/>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
-                     industry. Lorem Ipsum has been the industry's standard dummy text 
-                     ever since the 1500s, when an unknown printer took a galley of type
-                     and scrambled it to make a type specimen book
-                     Lorem Ipsum is simply dummy text of the printing and typesetting 
-                     industry. Lorem Ipsum has been the industry's standard dummy text 
-                     ever since the 1500s, when an unknown printer took a galley of type
-                     and scrambled it to make a type specimen book.</p>
-                  <br/>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
-                    industry. Lorem Ipsum has been the industry's standard dummy text 
-                    ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book
-                    Lorem Ipsum is simply dummy text of the printing and typesetting 
-                    industry. Lorem Ipsum has been the industry's standard dummy text 
-                    ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.</p>
-        </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <br />
-            <hr/>
-        </div>
-    </section>
-    <section class="generalInformation text-center">
-        <br />
-            <h1>GENERAL <span>INFORMATION</span></h1>
-        <br />
-        <div class="container">
-            <br />
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                    <a href="#officials-collapse" ><img src="../assets/images/barangayofficials.png" alt=""></a>
-                    <h4>BARANGAY OFFICIALS</h4>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                   <a href="#resources-collapse"><img src="../assets/images/resources.png" alt=""></a>
-                    <h4>RESOURCES</h4>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                    <a href="#history-collapse"><img src="../assets/images/barangayhistory.png" alt=""></a>
-                    <h4>BARANGAY HISTORY</h4>
-                </div>
-        </div>
-        <br/>
-    </section>
-    <section class="collapse collapse-section1" id="officials-collapse">
-        <div class="overlay">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tag-name">
-                    <h1 class="text-center">ORGANIZATIONAL <span>STRCUTURE</span></h1>
-                    <h3 class="text-center">BARANGAY CAPTAIN</h3>
-                    <br />
-                <div class="text-center">
-                    <img src="../assets/images/round.jpg" alt="">
-                    <h2>NAME F. LAST, 500 y.o</h2>
+        <section id="mapSection">
+                <div class="search-box-container">
+                        <div class="input-form icon-right">
+                                <angucomplete-alt
+                                placeholder="Search a barangay"
+                                pause="300"
+                                selected-object="barangay.selected"
+                                local-data="barangay.nameList"
+                                local-search="barangay.search"
+                                title-field="name"
+                                minlength="3"
+                                input-class="form-control form-control-small search-box"
+                                match-class="highlight" 
+                                input-changed="barangay.trackInputChange"/>
+                                <i class="fa fa-search"></i>
+                        </div>
                 </div>
                 
-                <div class="container">
-                    <hr />
-                    <!-- left columnn -->
-                    <h3 class="text-center">BARANGAY COUNCILOR</h3>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON FINANCE,</p>
-                                            <p>BUDGET AND APPROPRIATION</p>   
-                                    </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON PEACE AND</p>
-                                            <p>ORDER AND PUBLIC SAFETY</p>   
-                                    </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON HUMAN</p>
-                                            <p>RIGHTS</p>   
-                                    </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON HEALTH AND</p>
-                                            <p>SOCIAL WELFARE</p>   
-                                    </div>
-                            </div>
-                    </div>
-                    <!-- right column -->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON RULES AND</p>
-                                            <p>PRIVILEGES</p>   
-                                    </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON AGRICULTURE</p>
-                                    </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON ENVIRONMENT</p>
-                                            <p>PROTECTION</p>   
-                                    </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                            <img src="../assets/images/round.jpg" alt="">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                            <h2>NAME F. LAST, 500 y.o</h2>
-                                            <p>COMMITEE ON EDUCATION</p>
-                                            <p>AND CULTURE</p>   
-                                    </div>
-                            </div>
-                    </div>
-            </div>
-            <div class="container">
-                    <hr />
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
-                        <h3 class="text-center">BARANGAY SECRETARY</h3>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                    <img src="../assets/images/round.jpg" alt="">
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                    <h2>NAME F. LAST</h2>
-                                    <p>AGE</p>
-                            </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
-                            <h3 class="text-center">BARANGAY TREASURER</h3>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
-                                    <img src="../assets/images/round.jpg" alt="">
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
-                                    <h2>NAME F. LAST</h2>
-                                    <p>AGE</p>  
-                            </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-    </section>
-    <section class="collapse-section collapse" id="resources-collapse">
-        <div class="overlay">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <br />
-                    <h2>RESOURCES</h2>
-                <div class="autoplay">
-                    <div>
-                        <img src="../assets/images/tanim.jpg" alt="">
-                        <h3>RICE FIELDS</h3>
-                        <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry.</P>
-                    </div>
-                    <div>
-                        <img src="../assets/images/corn-field.jpg" alt="">
-                        <h3>CORN</h3>
-                        <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry.</P>
-                    </div>
-                    <div>
-                        <img src="../assets/images/fishing.jpg" alt="">
-                        <h3>FISHING</h3>
-                        <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry.</P>
-                    </div>
-                    <div>
-                        <img src="../assets/images/corn-field.jpg" alt="">
-                        <h3>CORN</h3>
-                        <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry.</P>
-                    </div>
-                    <div>
-                        <img src="../assets/images/fishing.jpg" alt="">
-                        <h3>FISHING</h3>
-                        <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry.</P>
-                    </div>
+
+                <img class="barangay-map" data-ng-src="{{barangay.imageSrc}}">
+        </section>
+        
+
+
+        <section class="mapDescripption container-fluid" data-ng-if="barangay.barangayId!=='main'">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
+                        <img data-ng-src="{{barangay.barangayImageSrc}}" alt="">
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="collapse-section2 collapse" id="history-collapse">
-        <div class="overlay">
-            <div class="container">
-                <br />
-                    <h1>Barangay <span>History</span></h1>
-                    <p class="margin">Where does it come from?</p>
-                    <br />
-                    <p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book
-                            Lorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book
-                            Lorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book
-                            Lorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book</p>
-                    <br />
-                    <p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book
-                            Lorem Ipsum is simply dummy text of the printing and typesetting 
-                            industry. Lorem Ipsum has been the industry's standard dummy text 
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book</p>
-            </div>
-        </div>
-    </section>
-    <section class="tourist-spot container">
-        <br />
-        <h2>TOURIST <span>SPOTS</span></h2>
-        <br />
-           <div class="slider-for">
-               <img src="../assets/images/mountains.jpg" alt="">
-               <img src="../assets/images/falls.jpg" alt="">
-               <img src="../assets/images/stone-sea.jpg" alt="">
-               <img src="../assets/images/lake.jpg" alt="">
-               <img src="../assets/images/falls.jpg" alt="">
-           </div>
-           <div class="slider-nav">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sanRoque">
+                        <br />
+                        <h2>{{barangay.getBarangayName()}}</h2>
+                        <hr />
+                        <br/>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                industry. Lorem Ipsum has been the industry's standard dummy text 
+                                ever since the 1500s, when an unknown printer took a galley of type
+                                and scrambled it to make a type specimen book
+                                Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                industry. Lorem Ipsum has been the industry's standard dummy text 
+                                ever since the 1500s, when an unknown printer took a galley of type
+                                and scrambled it to make a type specimen book.</p>
+                                <br/>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                industry. Lorem Ipsum has been the industry's standard dummy text 
+                                ever since the 1500s, when an unknown printer took a galley of type
+                                and scrambled it to make a type specimen book
+                                Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                industry. Lorem Ipsum has been the industry's standard dummy text 
+                                ever since the 1500s, when an unknown printer took a galley of type
+                                and scrambled it to make a type specimen book.</p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <br />
+                        <hr/>
+                        </div>
+                </section>
+                <div class="for-non-mobile">
+                        <section class="generalInformation text-center">
+                                <br />
+                                <h1>GENERAL <span>INFORMATION</span></h1>
+                                <br />
+                                <div class="container">
+                                <br />
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
+                                        <a href="#officials-collapse" ><img src="../assets/images/barangayofficials.png" alt=""></a>
+                                        <h4>BARANGAY OFFICIALS</h4>
+                                
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                        <a href="#resources-collapse"><img src="../assets/images/resources.png" alt=""></a>
+                                        <h4>RESOURCES</h4>
+                                
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 default">
+                                        <a href="#history-collapse"><img src="../assets/images/barangayhistory.png" alt=""></a>
+                                        <h4>BARANGAY HISTORY</h4>
+                                
+                                        </div>
+                                </div>
+                                <br/>
+                        </section>
+                        <section class="collapse collapse-section1" id="officials-collapse">
+                                <div class="overlay">
+                                        <div class="container">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tag-name">
+                                                        <div class="row">
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                                        <div class="arrow-up"></div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                        </div>
+                                                        <h1 class="text-center">ORGANIZATIONAL <span>STRCUTURE</span></h1>
+                                                        <h3 class="text-center">BARANGAY CAPTAIN</h3>
+                                                        <br />
+                                                        <div class="row">
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                                        <div class="text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                        </div>
+                                                        <hr />                                                                
+                                                        <h3 class="text-center">BARANGAY COUNCILOR</h3>
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                <p>COMMITEE ON FINANCE,</p>
+                                                                                <p>BUDGET AND APPROPRIATION</p>   
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                <p>COMMITEE ON PEACE AND</p>
+                                                                                <p>ORDER AND PUBLIC SAFETY</p>   
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                <p>COMMITEE ON HUMAN</p>
+                                                                                <p>RIGHTS</p>   
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                <p>COMMITEE ON HEALTH AND</p>
+                                                                                <p>SOCIAL WELFARE</p>   
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                        <img src="../assets/images/round.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                        <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                        <p>COMMITEE ON RULES AND</p>
+                                                                                        <p>PRIVILEGES</p>   
+                                                                                </div>
+                                                                        </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                <p>COMMITEE ON AGRICULTURE</p>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                <p>COMMITEE ON ENVIRONMENT</p>
+                                                                                <p>PROTECTION</p>   
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                <p>COMMITEE ON EDUCATION</p>
+                                                                                <p>AND CULTURE</p>   
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0"><hr/></div>
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                <h3 class="text-center">BARANGAY SECRETARY</h3>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                        <img src="../assets/images/round.jpg" alt="">
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                        <h2>NAME F. LAST</h2>
+                                                                        <p>AGE</p>
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                <h3 class="text-center">BARANGAY TREASURER</h3>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                        <img src="../assets/images/round.jpg" alt="">
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                        <h2>NAME F. LAST</h2>
+                                                                        <p>AGE</p>  
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0"><br/></div>
+                                                 </div>
+                                        </div>                     
+                                </div>
+                        </section>
+                        </section>
+                        <section class="collapse-section collapse for-big" id="resources-collapse">
+                                <div class="background">
+                                        <div class="overlay">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                        <div class="contaier">
+                                                                <div class="row">
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                                                <div class="arrow-up"></div>
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                </div>
+
+                                                        </div>
+                                                        <br />
+                                                        <h2>RESOURCES</h2>
+                                                        <div class="autoplay">
+                                                        <div>
+                                                                <img src="../assets/images/tanim.jpg" alt="">
+                                                                <h3>RICE FIELDS</h3>
+                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                industry.</P>
+                                                        </div>
+                                                        <div>
+                                                                <img src="../assets/images/corn-field.jpg" alt="">
+                                                                <h3>CORN</h3>
+                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                industry.</P>
+                                                        </div>
+                                                        <div>
+                                                                <img src="../assets/images/fishing.jpg" alt="">
+                                                                <h3>FISHING</h3>
+                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                industry.</P>
+                                                        </div>
+                                                        <div>
+                                                                <img src="../assets/images/corn-field.jpg" alt="">
+                                                                <h3>CORN</h3>
+                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                industry.</P>
+                                                        </div>
+                                                        <div>
+                                                                <img src="../assets/images/fishing.jpg" alt="">
+                                                                <h3>FISHING</h3>
+                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                industry.</P>
+                                                        </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                        <section class="collapse-section2 collapse" id="history-collapse">
+                                <div class="overlay1">
+                                        <div class="container">
+                                                        <div class="contaier">
+                                                                        <div class="row">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                                                                        <div class="arrow-up"></div>
+                                                                                        </div>
+                                                                        </div>
+                
+                                                                </div>
+                                                <br />
+                                                <h1>Barangay <span>History</span></h1>
+                                                <p class="margin">Where does it come from?</p>
+                                                <br />
+                                                <p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen book
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen book
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen book
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen book</p>
+                                                <br />
+                                                <p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen book
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                        and scrambled it to make a type specimen book</p>
+                                        </div>
+                                        <div class="margin-bottom"></div>
+                                </div>
+                        </section>
+                </div>
+                <!-- for mobile collapse -->
+                <div class="for-mobile">
+                        <section class="generalInformation text-center">
+                                        <br />
+                                        <h1>GENERAL <span>INFORMATION</span></h1>
+                                        <br />
+                                        <div class="container">
+                                        <br />
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
+                                                <a href="#officials-collapse1" ><img src="../assets/images/barangayofficials.png" alt=""></a>
+                                                <h4>BARANGAY OFFICIALS</h4>
+                                                <section class="collapse collapse-section1" id="officials-collapse1">
+                                                                <div class="overlay">
+                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tag-name">
+                                                                                <div class="container">
+                                                                                                <div class="row">
+                                                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                                                                                        <div class="arrow-up"></div>
+                                                                                                                </div>
+                                                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                                </div>
+                                        
+                                                                                        </div>
+                                                                        <h1 class="text-center">ORGANIZATIONAL <span>STRCUTURE</span></h1>
+                                                                        <h3 class="text-center">BARANGAY CAPTAIN</h3>
+                                                                        <br />
+                                                                        <div class="text-center">
+                                                                        <img src="../assets/images/round.jpg" alt="">
+                                                                        <h2>NAME F. LAST, 500 y.o</h2>
+                                                                        </div>
+                                                                        
+                                                                        <div class="container">
+                                                                        <hr />
+                                                                        <!-- left columnn -->
+                                                                        <h3 class="text-center">BARANGAY COUNCILOR</h3>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON FINANCE,</p>
+                                                                                                <p>BUDGET AND APPROPRIATION</p>   
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON PEACE AND</p>
+                                                                                                <p>ORDER AND PUBLIC SAFETY</p>   
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON HUMAN</p>
+                                                                                                <p>RIGHTS</p>   
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON HEALTH AND</p>
+                                                                                                <p>SOCIAL WELFARE</p>   
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <!-- right column -->
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON RULES AND</p>
+                                                                                                <p>PRIVILEGES</p>   
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON AGRICULTURE</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON ENVIRONMENT</p>
+                                                                                                <p>PROTECTION</p>   
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 padding-0">
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                                <img src="../assets/images/round.jpg" alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                                <h2>NAME F. LAST, 500 y.o</h2>
+                                                                                                <p>COMMITEE ON EDUCATION</p>
+                                                                                                <p>AND CULTURE</p>   
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="container">
+                                                                        <hr />
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                                <h3 class="text-center">BARANGAY SECRETARY</h3>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                        <img src="../assets/images/round.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                        <h2>NAME F. LAST</h2>
+                                                                                        <p>AGE</p>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 padding-0">
+                                                                                <h3 class="text-center">BARANGAY TREASURER</h3>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 padding-0 text-center">
+                                                                                        <img src="../assets/images/round.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 padding-0">
+                                                                                        <h2>NAME F. LAST</h2>
+                                                                                        <p>AGE</p>  
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                </div>
+                                                        </div>
+                                                        </section>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                <a href="#resources-collapse1"><img src="../assets/images/resources.png" alt=""></a>
+                                                <h4>RESOURCES</h4>
+                                                <section class="collapse-section collapse" id="resources-collapse1">
+                                                                <div class="background">
+                                                                        <div class="overlay">
+                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                                                        <div class="contaier">
+                                                                                                <div class="row">
+                                                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                                                                                        <div class="arrow-up"></div>
+                                                                                                                </div>
+                                                                                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                                </div>
+                                        
+                                                                                        </div>
+                                                                                        <br />
+                                                                                        <h2>RESOURCES</h2>
+                                                                                <div class="container">
+                                                                                        <div class="autoplay1">
+                                                                                        <div>
+                                                                                                <img src="../assets/images/tanim.jpg" alt="">
+                                                                                                <h3>RICE FIELDS</h3>
+                                                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                                industry.</P>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                                <img src="../assets/images/corn-field.jpg" alt="">
+                                                                                                <h3>CORN</h3>
+                                                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                                industry.</P>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                                <img src="../assets/images/fishing.jpg" alt="">
+                                                                                                <h3>FISHING</h3>
+                                                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                                industry.</P>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                                <img src="../assets/images/corn-field.jpg" alt="">
+                                                                                                <h3>CORN</h3>
+                                                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                                industry.</P>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                                <img src="../assets/images/fishing.jpg" alt="">
+                                                                                                <h3>FISHING</h3>
+                                                                                                <P>Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                                industry.</P>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </section>
+                                                
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 default">
+                                                <a href="#history-collapse1"><img src="../assets/images/barangayhistory.png" alt=""></a>
+                                                <h4>BARANGAY HISTORY</h4>
+                                                <section class="collapse-section2 collapse" id="history-collapse1">
+                                                                <div class="overlay1">
+                                                                        <div class="container">
+                                                                                        <div class="contaier">
+                                                                                                        <div class="row">
+                                                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"></div>
+                                                                                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                                                                                                                        <div class="arrow-up"></div>
+                                                                                                                        </div>
+                                                                                                        </div>
+                                                
+                                                                                                </div>
+                                                                                <br />
+                                                                                <h1>Barangay <span>History</span></h1>
+                                                                                <p class="margin">Where does it come from?</p>
+                                                                                <br />
+                                                                                <p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen book
+                                                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen book
+                                                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen book
+                                                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen book</p>
+                                                                                <br />
+                                                                                <p class="indent">Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen book
+                                                                                        Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                                                                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                                                                                        ever since the 1500s, when an unknown printer took a galley of type
+                                                                                        and scrambled it to make a type specimen book</p>
+                                                                        </div>
+                                                                        <div class="margin-bottom"></div>
+                                                                </div>
+                                                        </section>
+                                                </div>
+                                        </div>
+                                        <br/>
+                                </section>
+                        </div>
+                <!-- end for mobile -->
+                <section class="tourist-spot container-fluid">
+                        <br />
+                        <h2>TOURIST <span>SPOTS</span></h2>
+                        <br />
+                        <div class="slider-for">
                         <img src="../assets/images/mountains.jpg" alt="">
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                         <img src="../assets/images/falls.jpg" alt="">
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                         <img src="../assets/images/stone-sea.jpg" alt="">
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                         <img src="../assets/images/lake.jpg" alt="">
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
                         <img src="../assets/images/falls.jpg" alt="">
-                </div>
-            </div>
-    </section>
+                        </div>
+                        <br />
+                        <div class="slider-nav">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                        <img src="../assets/images/mountains.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                        <img src="../assets/images/falls.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                        <img src="../assets/images/stone-sea.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                        <img src="../assets/images/lake.jpg" alt="">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                        <img src="../assets/images/falls.jpg" alt="">
+                                </div>
+                        </div>
+                </section>
+
     <!-- bower:js -->
     <!-- endbower -->
 

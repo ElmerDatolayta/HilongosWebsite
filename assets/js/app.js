@@ -58,10 +58,18 @@ $('.slider-for').slick({
     slidesToScroll: 3
   });
 
+  $('#history-collapse').collapse('show');
   $(".generalInformation .container .col-12 a").click(function(e){
         e.preventDefault();
         var id=$(this).attr('href');
         $('.collapse').collapse('hide');
         $(id).collapse('show');
   })
+
+  $('.autoplay1').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
       
